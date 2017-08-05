@@ -6,7 +6,7 @@ h <- mutate(h, datetime = paste(Date,Time,sep=" "))
 h <- mutate(h, datetime = as.POSIXct(strptime(datetime, "%d/%m/%Y %H:%M:%S")))
 
 png("plot1.png")
-histinfo <- hist(h$Global_active_power, 
+histinfo <- hist(h$Global_active_power,
      main="Global Active Power", 
      col="red", 
      xlab = "Global Active Power(kilowatts)", 
